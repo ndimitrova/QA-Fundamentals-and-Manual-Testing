@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "f877ddea-6d1d-494b-840e-30d59b13a605",
+		"name": "MovieCatalog2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12793609"
+	},
+	"item": [
+		{
+			"name": "/api/User/Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"nina7@n.bg\",\r\n  \"password\": \"1234567\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/User/Authentication",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Movie/Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2MTE2Y2NlOC0wMWZiLTQ4ZWYtYTE4ZS1iM2U1MDdkYjRhOTAiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MzQ6NTIgQU0iLCJVc2VySWQiOiI4NzVhNWI0ZC02NjgyLTQxNWItMTJlNi0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6Im5pbmFAbi5iZyIsIlVzZXJOYW1lIjoibmlua2EiLCJleHAiOjE3MTMxMTI0OTIsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.0Pul3CcJAzRpGn-xarJAx6Orvr_25qpkUIssEA1yeXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Games of Thrones\",\r\n  \"description\": \"This is my first added movie\",\r\n  \"posterUrl\": \"\",\r\n  \"trailerLink\": \"\",\r\n  \"isWatched\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Create",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Catalog/All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2MTE2Y2NlOC0wMWZiLTQ4ZWYtYTE4ZS1iM2U1MDdkYjRhOTAiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MzQ6NTIgQU0iLCJVc2VySWQiOiI4NzVhNWI0ZC02NjgyLTQxNWItMTJlNi0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6Im5pbmFAbi5iZyIsIlVzZXJOYW1lIjoibmlua2EiLCJleHAiOjE3MTMxMTI0OTIsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.0Pul3CcJAzRpGn-xarJAx6Orvr_25qpkUIssEA1yeXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Catalog/All",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Catalog",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Movie/Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2MTE2Y2NlOC0wMWZiLTQ4ZWYtYTE4ZS1iM2U1MDdkYjRhOTAiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MzQ6NTIgQU0iLCJVc2VySWQiOiI4NzVhNWI0ZC02NjgyLTQxNWItMTJlNi0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6Im5pbmFAbi5iZyIsIlVzZXJOYW1lIjoibmlua2EiLCJleHAiOjE3MTMxMTI0OTIsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.0Pul3CcJAzRpGn-xarJAx6Orvr_25qpkUIssEA1yeXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \t\"title\": \"Violent Night\",\r\n  \t\"description\": \"This is new movie\",\r\n  \t\"posterUrl\": \"\",\r\n  \t\"trailerLink\": \"\",\r\n  \t\"isWatched\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Edit?movieId=da25d5bb-2128-42e1-4bd8-08dc5c49929d",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "da25d5bb-2128-42e1-4bd8-08dc5c49929d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Movie/Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2MTE2Y2NlOC0wMWZiLTQ4ZWYtYTE4ZS1iM2U1MDdkYjRhOTAiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MzQ6NTIgQU0iLCJVc2VySWQiOiI4NzVhNWI0ZC02NjgyLTQxNWItMTJlNi0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6Im5pbmFAbi5iZyIsIlVzZXJOYW1lIjoibmlua2EiLCJleHAiOjE3MTMxMTI0OTIsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.0Pul3CcJAzRpGn-xarJAx6Orvr_25qpkUIssEA1yeXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Delete?movieId=da25d5bb-2128-42e1-4bd8-08dc5c49929d",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "da25d5bb-2128-42e1-4bd8-08dc5c49929d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
